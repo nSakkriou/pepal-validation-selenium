@@ -37,7 +37,7 @@ class SeleniumScrapperPepal:
             time.sleep(3)
             
             try:
-                close = self.driver.find_element(By.XPATH, '//*[@id="body_presences"]/tr[1]/td[4]/div/span[@class="text-danger"]')
+                close = self.driver.find_element(By.XPATH, '//*[@id="body_presences"]/tr[@class="warining"]/td[4]/div/span[@class="text-danger"]')
                 
                 if close.text == "L'appel est clôturé.":
                     logging.warning("Appel cloturé")
