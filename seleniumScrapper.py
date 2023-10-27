@@ -33,9 +33,6 @@ class SeleniumScrapperPepal:
         btn = self.driver.find_element(By.XPATH, '//*[@id="body_presences"]/tr[@class="warning"]/td[3]/a')
         
         if btn.text == "Relevé de présence":
-            print(btn)
-            time.sleep(3)
-            
             try:
                 close = self.driver.find_element(By.XPATH, '//*[@id="body_presences"]/tr[@class="warining"]/td[4]/div/span[@class="text-danger"]')
                 
